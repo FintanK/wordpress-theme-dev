@@ -1,0 +1,23 @@
+CACHE MANIFEST
+# 2013-03-23
+
+# Explicitly cached entries
+style.css
+images/logo.png
+images/low_contrast_linen.png
+images/favicon.ico
+images/apple-touch-icon.png
+images/apple-touch-icon-72x72.png
+images/apple-touch-icon-114x114.png
+images/devices-HTML.png
+images/devices.png
+
+# offline.html will be displayed if the user is offline
+FALLBACK:
+
+# All other resources (e.g. sites) require the user to be online. 
+NETWORK:
+*
+
+# Additional resources to cache
+CACHE:

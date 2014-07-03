@@ -1,0 +1,77 @@
+http://codex.wordpress.org/Template_Tags
+
+<?php echo get_option('home'); ?> /* get the home URL */
+<?php bloginfo('description'); ?> /* display the blog description */
+<?php bloginfo('name'); ?> /* display the blog name */
+<?php bloginfo('template_directory') ?> /* get the home URL for template's directory */
+ 
+<?php wp_list_pages('sort_order=desc&title_li='); ?> /* display the page list in descending order withour title */
+<?php wp_list_bookmarks(); ?> /* display the list of blogrolls */
+ 
+===============within a loop===============
+<?php the_content(); ?> /* display the contents of the current post */
+<?php the_content(''); ?> /* the text "read more" will not show up */
+<?php the_tags('', ' . ', ''); ?> /* dispaly the tags of the post */
+<?php the_time('F jS, Y') ?> /* display the time of the current post */
+<?php the_ID(); ?> /* display the numeric ID of the current post */
+<?php comments_popup_link('No Comments', '1 Comment', '% Comments'); ?> /* display a link to them comment*/
+<?php the_author() ?> /* display the author's name of the post */
+<?php the_author_ID()?> /* display the unique numeric user ID for the author of a post */
+<?php echo get_avatar( $comment, 80 ); ?> /* display the commentor avatar in a size of 80px X 80px */
+<?php comment_text() ?> /* display the comment content */
+<?php the_permalink() ?> /* display the URL for the permalink of the post currently being processed */
+ 
+============Paganavigation===============
+<?php previous_post_link('%link', 'Previous Post') ?> /* display a link to the previous post with an anchor text as "Previous Post" */
+<?php next_post_link('%link', 'Next Post') ?> /* display a link to the next post with an anchor text as "Next Post" */
+<?php posts_nav_link('','','« Previous Entries') ?> /* display a link to the previous page with an anchor text as "Previous Page" */
+<?php posts_nav_link('','Next Entries »','') ?> /* display a link to the next page with an anchor text as "Next Page" */
+<?php previous_image_link() ?> /* display a link to the previous image within the gallery */
+<?php next_image_link() ?> /* display a link to the previous image within the gallery */
+ 
+============file linking=================
+<?php get_header(); ?> /* load header.php */
+<?php get_sidebar(); ?> /* load sidebar.php */
+<?php get_footer(); ?> /* load footer.php */
+<?php comments_template(); ?> /* load comments.php */
+<?php include (TEMPLATEPATH . '/searchform.php'); ?> /* load searchform.php */
+<?php include('about.php'); ?> /* load about.php */
+<?php include('featured-post.php'); ?> /* load featured-post.php */
+ 
+============widgetize sidebar============
+<?php if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar('sidebar2') ) : ?>
+    /* if it is a widgetize sidebar, defince this as sidebar 2*/
+<?php endif; ?> 
+ 
+============define the page template name in admin panel==================
+<?php
+/*
+Template Name: Links
+*/
+?>
+ 
+============normal post loop==================
+<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
+/* a normal posts loop, the contents go here */
+<?php endwhile; else: ?>
+<?php endif; ?>/* end loop */
+ 
+============query post loop==================
+<?php query_posts($query_string);
+while (have_posts()) : the_post(); ?> /* get all posts excluding posts under category with ID=3 */
+/* the contents go here */
+<?php endwhile; ?>/* end loop */
+ 
+============comment loop==================
+<?php foreach ($comments as $comment) : ?> /* start the comments loop */
+<?php endforeach; ?>/* end comments loop */
+ 
+============use of custom fields==================
+<?php while (have_posts()) : the_post(); /* start the loop */
+$myphoto = get_post_meta($post->ID, "myphoto", TRUE); /* define the custom field key for the post being processed in the loop with the ID */
+$mydesc = get_post_meta($post->ID, "mydesc", TRUE); /* define the custom field key for the post being processed in the loop with the ID */
+?>
+ 
+<?php echo $mydesc; ?> /* display the custom field value */
+ 
+<?php endwhile; ?> /* end loop */
