@@ -9,8 +9,6 @@ images/favicon.ico
 images/apple-touch-icon.png
 images/apple-touch-icon-72x72.png
 images/apple-touch-icon-114x114.png
-images/devices-HTML.png
-images/devices.png
 
 # offline.html will be displayed if the user is offline
 FALLBACK:

@@ -27,10 +27,6 @@
         <meta property="og:title" content="<?php bloginfo('name'); ?>"/>
         <meta property="og:type" content="article"/>
         <meta property="og:url" content="<?php bloginfo('url'); ?>"/>
-        <meta property="og:image" content="<?php bloginfo('template_url'); ?>/images/apple-touch-icon.png"/>
-        <meta property="og:image:width" content="300" />
-        <meta property="og:image:height" content="300" />
-        <meta property="og:image:height" content="1000" />
         <meta property="og:site_name" content="<?php bloginfo('name'); ?>"/>
         <meta property="fb:admins" content="USER_ID"/>
         <meta property="og:description" content="<?php bloginfo('name'); ?>"/>
@@ -45,25 +41,10 @@
         <!-- CSS -->
         <link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); ?>">
 
-        <!-- SyntaxHighlighter Styles  -->
-        <link href="<?php bloginfo('template_url'); ?>/css/shCore.css" rel="stylesheet" type="text/css" />
-        <link href="<?php bloginfo('template_url'); ?>/css/shThemeDefault.css" rel="stylesheet" type="text/css" />
-
         <!-- Favicons and Icons
         ================================================== -->
         <link rel="shortcut icon" href="<?php bloginfo('template_url'); ?>/images/favicon.ico">
-        <link rel="apple-touch-icon" href="<?php bloginfo('template_url'); ?>/images/apple-touch-icon.png">
-        <link rel="apple-touch-icon" sizes="72x72" href="<?php bloginfo('template_url'); ?>/images/apple-touch-icon-72x72.png">
-        <link rel="apple-touch-icon" sizes="114x114" href="<?php bloginfo('template_url'); ?>/images/apple-touch-icon-114x114.png">
-
         <script src="<?php bloginfo('template_url'); ?>/js/jquery.min.js"></script>
-
-        <script type="text/javascript" src="<?php bloginfo('template_url'); ?>/scripts/shCore.js"></script>
-        <script type="text/javascript" src="<?php bloginfo('template_url'); ?>/scripts/shBrushBash.js"></script>
-        <script type="text/javascript" src="<?php bloginfo('template_url'); ?>/scripts/shBrushSql.js"></script>
-        <script type="text/javascript" src="<?php bloginfo('template_url'); ?>/scripts/shBrushPhp.js"></script>
-        <script type="text/javascript" src="<?php bloginfo('template_url'); ?>/scripts/shBrushXml.js"></script>
-        <script type="text/javascript" src="<?php bloginfo('template_url'); ?>/scripts/shBrushJScript.js"></script>
 
         <script src="<?php bloginfo('template_url'); ?>/js/custom.js"></script>
 
@@ -73,7 +54,6 @@
             <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
         <![endif]-->
 
-        <?php wp_head(); ?>
     </head>
     <body>
 

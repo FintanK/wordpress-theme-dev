@@ -32,5 +32,7 @@ add_theme_support('post-thumbnails');
 set_post_thumbnail_size(50, 50, true); // Normal post thumbnails
 add_image_size('single-post-thumbnail', 147, 100); // Permalink thumbnail size
 
+add_filter('show_admin_bar', '__return_false');
+
 
 ?>

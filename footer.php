@@ -18,11 +18,6 @@
     ));
     ?>
 </div>
-
-
-<script type="text/javascript">
-    SyntaxHighlighter.all()
-</script>
 </div><!-- container -->
 </div><!-- page-wrapper -->
 
